@@ -1,4 +1,4 @@
-package assingment1;
+package ineruonProjectsAssigment1;
 
 import java.util.Scanner;
 
@@ -51,14 +51,14 @@ public class Program1 {
 			}
 		}
 		//R
-//		for(int j=0;j<height+1;j++) {
-//			if(j==0 || j==i && i> (height-1)/2 || i== 0 || i== (height-1)/2 ||) {
-//					System.out.print("*");
-//				}
-//				else {
-//					System.out.print(" ");
-//			}
-//		}
+		for(int j=0;j<height+1;j++) {
+			if(j==0 ||j==height-1 && i<(height-1)/2 || j==i && i> (height-1)/2 || (i== 0 || i== (height-1)/2)&&j!= height) {
+					System.out.print("*");
+				}
+				else {
+					System.out.print(" ");
+			}
+	}
 		
 		// O
 		for (int j=0; j<height+1;j++) {
