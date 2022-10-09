@@ -2,17 +2,17 @@ package assingment1;
 
 import java.util.Scanner;
 
-public class Program4 {
+public class Program3 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter number of rows");
 		int rows = sc.nextInt();
-		int columns = (rows-1)*2;
-		int printUpto = 2;
-		int printAfter = columns-printUpto+1;
-		for(int i=1;i<=rows;i++) {
-			for(int j=1;j<=columns;j++) {
-				if(j<printUpto || j>printAfter) {
+		int middleRowIndex = rows/2;
+		int printUpto = middleRowIndex;
+		int printAfter = middleRowIndex;
+		for(int i=0;i<rows;i++) {
+			for(int j=0;j<rows;j++) {
+				if(i==0 || i==rows-1 || (j<printUpto || j>= printAfter-1) && i<middleRowIndex || j==0 || j== rows-1) {
 					System.out.print("*");
 				}
 				else {
@@ -20,8 +20,9 @@ public class Program4 {
 				}
 			}
 			System.out.println();
-			printUpto++;
-			printAfter--;
+			printUpto--;
+			printAfter++;
 		}
 	}
+
 }
